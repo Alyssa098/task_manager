@@ -13,8 +13,7 @@ class ApplicationController < ActionController::Base
 
   
   def current_user
-    # binding.pry
-    if session[:user_id]
+      if session[:user_id]
       @current_user ||= User.find_by_id(session[:user_id])
       if @current_user.nil?
         reset_session 
