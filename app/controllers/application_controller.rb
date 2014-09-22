@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
 
   
   def current_user
-    #binding.pry
+    # binding.pry
     if session[:user_id]
       @current_user ||= User.find_by_id(session[:user_id])
       # binding.pry
